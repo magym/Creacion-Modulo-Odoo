@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record model="ir.actions.act_window" id="course_list_action">
+	  <field name="name">Courses</fields>
+	  <field name="res_model">PrimerModulo.course</field>
+	  <field name="view_type">form</field>
+	  <field name="view_mode">tree,form</field>
+	  <field name="help" type="html">
+	     <p class="oe_view_nocontent_create">Crear el primer curso 
+	     </p>
+	  </field>
+	</record>
+
+	<menuitem id="main_PrimerModulo_menu" name="Primer Modulo"/>
+	<menuitem id="PrimerModulo_menu" name="Primer Modulo" parent="main_PrimerModulo_menu"/>
+	<menuitem id="courses_menu" name="Courses" parent="PrimerModulo_menu" action="course_list_action"/>
+</odoo>
